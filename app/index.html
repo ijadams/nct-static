@@ -21,58 +21,248 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
+   
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700,100|Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css"/>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.red-yellow.min.css" />  </head>
+  <body class="">    <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">nct static</h3>
-      </div>
+   
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+      <div class="nct-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="nct-title mdl-layout-title">
+            <a href="#/"><img class="nct-logo-image" src="http://nctonline.com/atlassian/images/logo.def79748.png"></a>
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="nct-header-spacer mdl-layout-spacer"></div>
+          <div class="nct-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label id="search-icon" class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="nct-navigation-container">
+            <nav class="nct-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#/about">About</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tech</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Federal</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Advantages</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Support</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Contact</a>
+            </nav>
+          </div>
+          <span class="nct-mobile-title mdl-layout-title">
+            <a href="#/"><img class="nct-logo-image" src="http://nctonline.com/atlassian/images/logo.def79748.png"></a>
+          </span>
+          <button class="nct-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <a href="tel:555-555-5555"><i class="material-icons">settings_phone</i></a>
+          </button>
+        
         </div>
       </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
+      <div class="nct-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <a href="#"><img class="nct-logo-image" src="images/nct-logo-white.png"></a>
+
+        </span>
+        <nav class="mdl-navigation">
+          <div id="main-links">
+          <a class="mdl-navigation__link" href="#/about">About</a>
+          <a class="mdl-navigation__link" href="#/tech">Tech</a>
+          <a class="mdl-navigation__link" href="#/federal">Federal</a>
+          <a class="mdl-navigation__link" href="#/advantages">Advantages</a>
+          <a class="mdl-navigation__link" href="#/support">Support</a>
+          <a class="mdl-navigation__link" href="#/contact">Contact</a>
+          </div>
+
+          <div class="nct-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">TECH SOLUTIONS</span>
+          <a class="mdl-navigation__link" href="">Overview</a>
+          <a class="mdl-navigation__link" href="">Atlassian Software</a>
+          <a class="mdl-navigation__link" href="">VolP</a>
+          <a class="mdl-navigation__link" href="">Core Technologies</a>
+          <a class="mdl-navigation__link" href="">Data Management</a>
+
+          <div class="nct-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">SUPPORT</span>
+          <a class="mdl-navigation__link" href="">Get in touch</a>
+          <a class="mdl-navigation__link" href="">Sales Support</a>
+          <a class="mdl-navigation__link" href="">Technical Support</a>
+
+          <div class="nct-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="">NEWSLETTER</span>
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                <input class="mdl-textfield__input" type="text" id="sample1" />
+                <label class="mdl-textfield__label" for="sample1">Your email</label>
+              </div>
+            </form>
+          
+        </nav>
+      </div>
+
+      <div class="nct-content mdl-layout__content">
+        
+<section>
+  <a name="top"></a>
+  <div class="nct-be-together-section mdl-typography--text-center">
+    <canvas id="spiders" class="hidden-xs" width="100%" height="100%"></canvas>
+    <div class="logo-font nct-slogan">Network Communications Technology</div>
+    <div class="logo-font nct-sub-slogan">technology solutions with a purpose.</div>
+
+    <a data-scroll id="down" href="#purpose">
+      <button class="nct-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+        <i class="material-icons">expand_more</i>
+      </button>
+    </a>
+
+  </div>
+  <div class="row">
+
+  <div id="home-middle-section" class="container">
+        <a id="purpose"></a>
+
+  <div id="home-second-heading" class="row block block-secondary block-centered block-row">
+    <article class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+      <h2>DATA DRIVEN, PEOPLE MINDED.</h2>
+      <p>Scale your projects with agility and speed. Our tools power the leaders in the technology industries. <br>We help people be do their jobs better.</p>
+    </article>
+  </div><!-- /.row -->
+
+  <div id="home-feature-preview" class="row block block-row">
+    <article class="col-md-4">
+      <div class="solution-preview preview-3">
+        <h4>Experience</h4>
+        <p>Over 30 Years Of Supporting The Federal Government Intelligence Community</p>
+      </div>
+    </article>
+
+    <article class="col-md-4">
+      <div class="solution-preview preview-1">
+        <h4>Service</h4>
+        <p>Technical Expertise In Network Lab Design, Software Support And System Engineering</p>
+      </div>
+    </article>
+
+    <article class="col-md-4">
+      <div class="solution-preview preview-2">
+        <h4>DELIVERY</h4>
+        <p>Fastest Response Speed In The Industry For Bill Of Materials Design And Solution Delivery</p>
+      </div>
+    </article>
+
+  </div><!-- /.row -->
+
+
+</div>
+  </div>
+  <div class="nct-screen-section mdl-typography--text-center">
+    <div class="products">
+      <h1>Our <br>Products</h1>
+      <a class="btnOutline-products" href="#/tech">VIEW ALL</a>
+    </div>
+    <div class="nct-screens">
+      <div class="nct-wear nct-screen">
+        <a class="nct-image-link" href="">
+          <img class="nct-screen-image" src="https://www.insanely-great.com/img/MW_header_keyboard_large.png">
+          <img class="nct-screen-image" src="https://www.insanely-great.com/img/MW_header_keyboard_large.png">
+        </a>
+        <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Software</a>
+      </div>
+      <div class="nct-phone nct-screen">
+        <a class="nct-image-link" href="">
+          <img class="nct-screen-image" src="http://76.my/Malaysia/10m-ethernet-network-patch-cable-cat5e-pc-to-hub-lan-cable-loveu-1201-31-Loveu@1.jpg">
+        </a>
+        <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Networking</a>
+      </div>
+      <div class="nct-tablet nct-screen">
+        <a class="nct-image-link" href="">
+          <img class="nct-screen-image" src="http://www.throne.com/wp-content/uploads/2011/06/computer-server.jpg">
+        </a>
+        <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Hardware</a>
+      </div>
+      <div class="nct-tv nct-screen">
+        <a class="nct-image-link" href="">
+          <img class="nct-screen-image" src="http://cdn.shopclues.net/images/detailed/7167/Figure0_1412768000.png">
+        </a>
+        <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Onsite</a>
+      </div>
+      <div class="nct-auto nct-screen">
+        <a class="nct-image-link" href="">
+          <img class="nct-screen-image" src="images/side-profile.jpg">
+        </a>
+        <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Remote Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="nct-wear-section">
+    <div class="nct-wear-band">
+      <div class="nct-wear-band-text">
+        <div class="mdl-typography--display-2 mdl-typography--font-thin">Personal support at your service</div>
+        <p class="mdl-typography--headline mdl-typography--font-thin">
+          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.  
+        </p>
+        <p>
+          <a class="mdl-typography--font-regular mdl-typography--text-uppercase nct-alt-link" href="">
+            Learn more<i class="material-icons">chevron_right</i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="nct-customized-section">
+    <div class="nct-customized-section-text">
+      <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Let us find the perfect solution for your team.</div>
+      <p class="mdl-typography--font-light">
+        <br>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          CONTACT US
+        </button>
+      </p>
+    </div>
+    <div class="nct-customized-section-image"></div>
+  </div>
+  
+      
+</section>
+
+
+<footer class="nct-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--left-section">
+              <a class="social"><i class="mdi mdi-twitter"></i></a>
+              &nbsp;
+              <a class="social"><i class="mdi mdi-facebook"></i></a> 
+              &nbsp;
+              <a class="social"><i class="mdi mdi-linkedin"></i></a>
+            </div>
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+
+</footer>
+
+        
       </div>
     </div>
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    
+    
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -98,5 +288,31 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script defer src="https://code.getmdl.io/1.1.0/material.min.js"></script>
+    <!-- <script src="scripts/smoothscroll.min.js"></script> -->
+
+    <script type="text/javascript">
+        $(function(){
+            $('a').click(function(){
+                var speed = 220;
+                var href= $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top - 80;
+                $(".mdl-layout__content").animate({scrollTop:position}, speed, "swing");
+            });
+
+            function collapseNavbar() {
+    if ($(".nct-header").offset().top > 50) {
+        $(".mdl-layout__header-rowp").addClass("top-nav-collapse");
+    } else {
+        $(".mdl-layout__header-row").removeClass("top-nav-collapse");
+    }
+}
+        });
+
+
+
+    </script>
   </body>
 </html>
