@@ -31,7 +31,7 @@ $mono: Roboto Mono;
 //urls
 $url_0: url(../images/slide01.jpg);
 $url_building: url(../images/building.jpg);
-$url_2: url(../images/devices.jpg);
+$url_2: url(../images/bottom-bg.jpg);
 
 body {
   margin: 0;
@@ -54,6 +54,7 @@ a.btnOutline-products {
     font: normal 16px/16px 'Foundry Sterling W02b',Helvetica,Arial,sans-serif;
     color: $color_tuna_approx;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
 a.btnOutline-products:hover {
@@ -146,7 +147,7 @@ h3, h4, h5 {
   color: white !important;
   border: 3px solid white !important;
   &:hover {
-    background: rgba(255,255,255,0.9) !important;
+    background: rgba(255,255,255,1) !important;
     color: $color_tuna_approx !important;
   }
 }
@@ -287,11 +288,13 @@ h3, h4, h5 {
 
 #home-middle-section {
     padding-top: 1rem;
-    min-height: 80vh;
+    min-height: 100vh;
     margin-bottom: 0;
-    height: 100vh;
     #home-second-heading {
       padding-top:2rem;
+      @media screen and (max-width:480px) {
+        margin-bottom:0;
+      }
         h2 {
           font-family: $font_0;
           font-weight: 700;
@@ -299,9 +302,9 @@ h3, h4, h5 {
           font-size: 30px;
         }
         hr {width: 10%;margin: 24px auto;border-top: solid black 3px;}
-        p {font-size:16px;}
+        p {font-size:16px;font-weight:100;}
     }
-    #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;a.btn-large {margin-top:2.2rem;}}
+    #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;a.btn-large {margin-top:4.20rem; transition:0.3s;i {transition:0.3s;} &:hover {background:$color_red_as_hell !important;color:white; i {transform:  scale(1) rotate(90deg) translate(0px, 0px);}}}}
  .solution-preview {
     margin-bottom: 2.5em;
     background-repeat: no-repeat;
@@ -310,23 +313,38 @@ h3, h4, h5 {
     min-height: 85px;
     background-position: 5px 5px;
     margin-left: 40px;
+    p {font-weight:100;}
+    img {display:none;}
+    @media screen and (max-width:1200px) {
+      img {display:block;margin:0 auto;text-align:center;}
+      background-image: none !important;
+      margin: 0 auto;
+      padding:0;
+      text-align: center;
+    }
+
+    @media screen and (max-width:480px) {
+      margin: 0 auto;
+      text-align: center;
+      padding:0;
+    }
     h4 {margin-bottom:4px;}
       .preview-1 {
-      background-image: url(../images/preview-1.svg);
+      background-image: url(../images/preview-1.png);
       }
       .preview-2 {
-      background-image: url(../images/preview-2.svg);
+      background-image: url(../images/preview-2.png);
       }
       .preview-3 {
-      background-image: url(../images/preview-3.svg);
+      background-image: url(../images/preview-3.png);
       }
   }
 
 }
 
-.solution-preview.preview-1  {background-image: url(../images/preview-1.svg);}
-.solution-preview.preview-2  {background-image: url(../images/preview-2.svg);}
-.solution-preview.preview-3  {background-image: url(../images/preview-3.svg);}
+.solution-preview.preview-1  {background-image: url(../images/preview-1.png);}
+.solution-preview.preview-2  {background-image: url(../images/preview-2.png);}
+.solution-preview.preview-3  {background-image: url(../images/preview-3.png);}
 
 .nct-advantages {
   background-image: linear-gradient(to right,rgba(244, 67, 54,1),rgba(244, 67, 54,0.7),rgba(0,0,0,0.3));
@@ -335,6 +353,10 @@ h3, h4, h5 {
   height:100vh;
   .row {
     padding-top:20vh;
+    @media screen and (max-width:480px) {
+      padding-top:20vh;
+      h1 {line-height:1.5em;font-size:2.213em;}
+    }
     color:white;
       h1 {line-height:1.2em;}
       p {font-weight:100;}
@@ -367,6 +389,15 @@ h3, h4, h5 {
       font-weight: 700;
       line-height: 1em !important;
     }
+    @media screen and (max-width:900px) {
+      .nct-screen {max-width:12vw;}
+
+    }
+    @media screen and (max-width:480px) {
+      text-align:center;
+      padding:0;
+      margin:0 auto; 
+    }
   }
 }
 .nct-screens {
@@ -377,6 +408,12 @@ h3, h4, h5 {
 }
 .nct-screen {
   text-align: center;
+    @media screen and (max-width:480px) {
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center;
+        padding: 2rem 0;
+    }
   .nct-link {
     margin-top: 16px;
     display: block;
@@ -436,6 +473,9 @@ h3, h4, h5 {
     height: 300px;
     z-index: 1;
   }
+  @media screen and (max-width:480px) {
+    margin-left: 150px !important;
+  }
 }
 .nct-wear-section {
   position: relative;
@@ -444,7 +484,7 @@ h3, h4, h5 {
 .nct-wear-band {
   position: relative;
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   text-align: center;
   background-color: $color_tuna_approx;
   a:hover {text-decoration:underline !important;color:white !important;}
@@ -496,9 +536,9 @@ h3, h4, h5 {
   }
 }
 .nct-customized-section-image {
-  background: $url_2 center top no-repeat;
+  background: $url_2 center no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 350px;
 }
 .nct-more-section {
   padding: 80px 0;
@@ -542,8 +582,11 @@ h3, h4, h5 {
   }
 }
 .nct-footer {
-  background-color: $alabaster;
+  background-color: white !important;
   position: relative;
+  color: $color_boulder_approx;
+  a {color:white;}
+  .mdl-mega-footer {padding-top:0 !important;background-color: white;}
 
   .mdl-mega-footer--top-section::after {
     border-bottom: none;
@@ -552,24 +595,45 @@ h3, h4, h5 {
     border-bottom: none;
   }
   .mdl-mega-footer--bottom-section {
+
     position: relative;
     a {
+      color: white;
       margin-right: 2em;
     }
   }
   a:hover {
-    color: $color_tuna_approx;
+    color: gray;
+  }
+  .mdl-mega-footer--left-section {
+      @media screen and (max-width:768px) {
+        margin: 0 auto;
+        text-align: center;
+      }
+  }
+  .mdl-mega-footer--right-section {
+    float: right;
+    @media screen and (max-width:768px) {
+      width: 100%;
+      display: inline-block;
+      float: none;
+      text-align: center;
+      margin:0 auto;
+      .social {
+        display: inline-block;
+      } 
+    }
   }
   .mdl-mega-footer--right-section a .material-icons {
     position: relative;
     top: 6px;
   }
-  .mdl-mega-footer--left-section a.social i {
+  .mdl-mega-footer--right-section a.social i {
       font-size: 24px;
       color: $color_tuna_approx;
       &:hover  {
         cursor: pointer;
-        color: $color_concrete_approx;
+        color: lightgray;
       }
   }
 }
