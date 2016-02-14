@@ -21,6 +21,7 @@ $color_limed_spruce_approx: #37474f;
 $color_caribbean_green_approx: #00bfa5;
 $alabaster: #fafafa;
 $color_red_as_hell: #F44336;
+$color_clouds: #F2F4F5;
 
 //fonts
 $font_0: Roboto, Helvetica, Arial, sans-serif;
@@ -40,6 +41,7 @@ canvas {}
 a {text-decoration: none !important;}
 a:hover {
   text-decoration: none !important;
+  color: lightgray;
 }
 
 a.btnOutline-products {
@@ -81,7 +83,12 @@ h3, h4, h5 {
   color: $white;
 }
 .nct-search-box {
+  display: none !important;
   order: 2;
+  padding: 8px 0 !important;
+  @media screen and (min-width:900px) {
+  padding-top: 12px !important;
+  }
   margin-left: 16px;
   margin-right: 16px;
   .mdl-textfield__input {
@@ -93,6 +100,7 @@ h3, h4, h5 {
   }
 }
 .nct-header {
+  position: fixed;
   overflow: visible;
   background-color: $white !important;
   .mdl-menu__container {
@@ -114,6 +122,10 @@ h3, h4, h5 {
   .nct-search-box .mdl-textfield .mdl-button {
     bottom: 15px !important;
   }
+  .mobile-menu {display:none;}
+  @media screen and (max-width:900px) {
+    .mobile-menu {display:block;}
+  }
 }
 
 #spiders {position:absolute;top:0;left:0;width:100%;max-width:100%}
@@ -125,9 +137,18 @@ h3, h4, h5 {
   position: relative !important;
   margin: 0 auto;
   margin-top: 4rem !important;
+  @media screen and (max-width:900px) {
+    margin-top:2rem !important;
+
+  }
   z-index: 3;
-  background: $color_sunflower_approx !important;
-  color: $black !important;
+  background: rgba(158,158,158,0.2) !important;
+  color: white !important;
+  border: 3px solid white !important;
+  &:hover {
+    background: rgba(255,255,255,0.9) !important;
+    color: $color_tuna_approx !important;
+  }
 }
 .nct-mobile-title {
   display: none !important;
@@ -154,12 +175,13 @@ h3, h4, h5 {
     display: inline-block;
     height: 60px;
     line-height: 68px;
+    padding: 0 20px !important;
     background-color: transparent !important;
     border-bottom: 4px solid transparent;
     &:hover {
       border-bottom: 4px solid $color_tuna_approx;
       text-decoration: none !important;
-      font-weight: 700;
+      font-weight: bold;
     }
   }
 }
@@ -183,6 +205,10 @@ h3, h4, h5 {
   .mdl-navigation__link.mdl-navigation__link {
     font-size: 14px;
     color: $color_steel;
+    &:hover {
+      background: $color_red_as_hell;
+      color:white;
+    }
   }
   span.mdl-navigation__link.mdl-navigation__link {
     color: $color_steel;
@@ -191,16 +217,41 @@ h3, h4, h5 {
     width: 100%;
     padding:16px;
   }
+  .mdl-navigation {display:block;}
+
   #main-links a {
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none;\
+    &:hover {
+      background: $color_clouds;
+    }
   }
+  .mdl-textfield__label, .mdl-textfield__input {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mdl-textfield__label {
+    text-align: left;
+  }
+
 }
 .nct-drawer-separator {
   height: 1px;
   background-color: $color_alto_approx;
   margin: 8px 0;
 }
+
+#newsletter {
+  p {
+    padding:15px 0 15px 15px;    
+    font-size: 14px;
+    color: #B0BEC5;
+  }
+  margin-bottom:0;
+  background:$color_clouds;
+}
+
 .nct-be-together-section {
   position: relative;
   height: 800px;
@@ -218,7 +269,7 @@ h3, h4, h5 {
 }
 .nct-slogan {
   font-size: 60px;
-  padding-top: 160px;
+  padding-top: 33vh;
 }
 .nct-sub-slogan {
   font-size: 21px;
@@ -235,16 +286,22 @@ h3, h4, h5 {
 }
 
 #home-middle-section {
-    padding-top: 4rem; 
+    padding-top: 1rem;
+    min-height: 80vh;
+    margin-bottom: 0;
+    height: 100vh;
     #home-second-heading {
       padding-top:2rem;
         h2 {
           font-family: $font_0;
           font-weight: 700;
           line-height:100%;
+          font-size: 30px;
         }
+        hr {width: 10%;margin: 24px auto;border-top: solid black 3px;}
         p {font-size:16px;}
     }
+    #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;a.btn-large {margin-top:2.2rem;}}
  .solution-preview {
     margin-bottom: 2.5em;
     background-repeat: no-repeat;
@@ -271,7 +328,31 @@ h3, h4, h5 {
 .solution-preview.preview-2  {background-image: url(../images/preview-2.svg);}
 .solution-preview.preview-3  {background-image: url(../images/preview-3.svg);}
 
-.nct-screen-section {
+.nct-advantages {
+  background-image: linear-gradient(to right,rgba(244, 67, 54,1),rgba(244, 67, 54,0.7),rgba(0,0,0,0.3));
+  .parallax img {left:65% !important;}
+  .parallax-container {height:100%;}
+  height:100vh;
+  .row {
+    padding-top:20vh;
+    color:white;
+      h1 {line-height:1.2em;}
+      p {font-weight:100;}
+  }
+  .nct-fab {
+    margin-top: 0 !important;
+    position: absolute !important;
+    z-index: 9999 !important;
+    right: 20% !important;
+    margin-top: -47px !important;
+    background: white !important;
+    opacity: 1 !important;
+    color: $color_tuna_approx !important;
+    border-color: $color_tuna_approx !important;
+  }
+}
+
+.nct-screen-section {     
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
@@ -358,17 +439,15 @@ h3, h4, h5 {
 }
 .nct-wear-section {
   position: relative;
-  background: $url_building center top no-repeat;
-  background-size: cover;
-  height: 800px;
-  background-attachment: fixed;
+  overflow: auto;
 }
 .nct-wear-band {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
+  height: 50vh;
   text-align: center;
   background-color: $color_tuna_approx;
+  a:hover {text-decoration:underline !important;color:white !important;}
 }
 .nct-wear-band-text {
   max-width: 800px;
@@ -521,6 +600,7 @@ h3, h4, h5 {
     }
     .mdl-textfield__expandable-holder {
       width: 100%;
+      padding-top:8px;
     }
   }
   .nct-more-button {
@@ -532,7 +612,7 @@ h3, h4, h5 {
   .nct-slogan {
     font-size: 26px;
     margin: 0 16px;
-    padding-top: 24px;
+    padding-top: 20vh;
   }
   .nct-sub-slogan {
     font-size: 16px;
@@ -568,7 +648,6 @@ a img {
 }
 
 label#search-icon  {
-  bottom: 15px !important;
 }
 
 button {
@@ -597,3 +676,5 @@ button {
     background: none;
   }
 }
+
+
