@@ -37,7 +37,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
    
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="smoothState" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
       <div class="nct-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
@@ -134,7 +134,7 @@
         <article class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
           <h2>DATA DRIVEN, PEOPLE MINDED.</h2>
           <hr class="seperator">
-          <p>Scale your projects with agility and speed. Our tools power the leaders in the technology industries. <br>We help people be do their jobs better.</p>
+          <p>Scale your projects with agility and speed. Our tools power the leaders in the technology industries. <br><br><b>We help people be do their jobs better with our:</b></p>
         </article>
       </div><!-- /.row -->
 
@@ -163,14 +163,13 @@
           </div>
         </article>
 
+      </div><!-- /.row -->
+        
         <div class="row text-center scrollspy">
 
           <a class="waves-effect waves-light btn-large red lighten-1">Learn More<i class="material-icons right">keyboard_arrow_right</i></a>
 
         </div>
-
-      </div><!-- /.row -->
-
 
     </div><!-- end container -->
   </div><!-- end purpose -->
@@ -195,7 +194,41 @@
       <h1>Our <br>Products</h1>
       <a class="btnOutline-products" href="#/tech">VIEW ALL</a>
     </div>
-    <div class="nct-screens ">
+    
+
+    <!--
+    <div class="nct-screens">
+      <div class="row">
+        <div class="col-md-3 nct-screen">
+          <a class="nct-image-link" href="">
+            <img class="nct-screen-image" src="https://www.insanely-great.com/img/MW_header_keyboard_large.png">
+          </a>
+          <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Software</a>
+        </div>
+        <div class="col-md-3 nct-screen">
+          <a class="nct-image-link" href="">
+            <img class="nct-screen-image" src="http://76.my/Malaysia/10m-ethernet-network-patch-cable-cat5e-pc-to-hub-lan-cable-loveu-1201-31-Loveu@1.jpg">
+          </a>
+          <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Networking</a>
+        </div>
+        <div class="col-md-3 nct-screen">
+          <a class="nct-image-link" href="">
+            <img class="nct-screen-image" src="http://cdn.shopclues.net/images/detailed/7167/Figure0_1412768000.png">
+          </a>
+          <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase" href="">Onsite</a>
+        </div>
+        <div class="col-md-3 nct-screen">
+          <a class="nct-image-link" href="">
+            <img class="nct-screen-image" src="images/side-profile.jpg">
+          </a>
+          <a class="nct-link mdl-typography--font-regular mdl-typography--text-uppercase mdl-typography--text-left" href="">Remote Support</a>
+        </div>
+      </div>
+
+    </div>
+  -->
+
+    <div class="nct-screens">
       <div class="nct-wear nct-screen">
         <a class="nct-image-link" href="">
           <img class="nct-screen-image" src="https://www.insanely-great.com/img/MW_header_keyboard_large.png">
@@ -327,6 +360,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/smoothState.js"></script>
     <!-- endbuild -->
 
     <!-- side nav -->
@@ -339,8 +373,12 @@
         $('.parallax').parallax();
         $('.scrollspy').scrollSpy({offsetTop: 520});
         $(".button-collapse").sideNav();
+        $('#smoothState').smoothState();
+        $('.mdl-layout').addClass('mdl-layout-loaded');
 
       });
+
+      
     </script>
 
   </body>

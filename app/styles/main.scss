@@ -189,6 +189,7 @@ h3, h4, h5 {
 .nct-more-button {
   order: 3;
 }
+
 .nct-drawer {
   border-right: none;
   .mdl-layout-title {
@@ -253,14 +254,21 @@ h3, h4, h5 {
   background:$color_clouds;
 }
 
+.mdl-layout {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.mdl-layout-loaded {opacity: 1;}
+
 .nct-be-together-section {
   position: relative;
-  height: 800px;
+  height: auto;
   width: auto;
-  background: url(../images/space.jpg);
-  /*background: $url_0 center 30% no-repeat;*/
+  background: url(../images/white-guys.jpg) no-repeat;
   background-size: cover;
-  max-height: 100vh;
+  background-position: center;
+  min-height: 100vh;
 }
 .logo-font {
   font-family: $font_0;
@@ -291,7 +299,7 @@ h3, h4, h5 {
     min-height: 100vh;
     margin-bottom: 0;
     #home-second-heading {
-      padding-top:2rem;
+      padding-top:4rem;
       @media screen and (max-width:480px) {
         margin-bottom:0;
       }
@@ -299,12 +307,12 @@ h3, h4, h5 {
           font-family: $font_0;
           font-weight: 700;
           line-height:100%;
-          font-size: 30px;
+          font-size: 42px;
         }
         hr {width: 10%;margin: 24px auto;border-top: solid black 3px;}
         p {font-size:16px;font-weight:100;}
     }
-    #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;a.btn-large {margin-top:4.20rem; transition:0.3s;i {transition:0.3s;} &:hover {background:$color_red_as_hell !important;color:white; i {transform:  scale(1) rotate(90deg) translate(0px, 0px);}}}}
+    #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;}
  .solution-preview {
     margin-bottom: 2.5em;
     background-repeat: no-repeat;
@@ -339,7 +347,7 @@ h3, h4, h5 {
       background-image: url(../images/preview-3.png);
       }
   }
-
+  a.btn-large {margin-top:1rem; transition:0.3s;i {transition:0.3s;} &:hover {background:$color_red_as_hell !important;color:white;}}
 }
 
 .solution-preview.preview-1  {background-image: url(../images/preview-1.png);}
@@ -347,7 +355,7 @@ h3, h4, h5 {
 .solution-preview.preview-3  {background-image: url(../images/preview-3.png);}
 
 .nct-advantages {
-  background-image: linear-gradient(to right,rgba(244, 67, 54,1),rgba(244, 67, 54,0.7),rgba(0,0,0,0.3));
+  background-image: linear-gradient(to right,rgba(244, 67, 54,1),rgba(244, 67, 54,0.85),rgba(0,0,0,0.3));
   .parallax img {left:65% !important;}
   .parallax-container {height:100%;}
   height:100vh;
@@ -381,7 +389,7 @@ h3, h4, h5 {
   .products {
     width: 100%;
     text-align: left;
-    padding: 0 0 0 30%;
+    padding: 0 0 0 25%;
     color: white;
     h1 {
       font-size: 80px;
@@ -538,7 +546,7 @@ h3, h4, h5 {
 .nct-customized-section-image {
   background: $url_2 center no-repeat;
   background-size: cover;
-  height: 350px;
+  height: 295px;
 }
 .nct-more-section {
   padding: 80px 0;
@@ -586,7 +594,7 @@ h3, h4, h5 {
   position: relative;
   color: $color_boulder_approx;
   a {color:white;}
-  .mdl-mega-footer {padding-top:0 !important;background-color: white;}
+  .mdl-mega-footer {padding-top:10px !important;background-color: white;}
 
   .mdl-mega-footer--top-section::after {
     border-bottom: none;
@@ -674,12 +682,12 @@ h3, h4, h5 {
     height: 350px;
   }
   .nct-slogan {
-    font-size: 26px;
+    font-size: 50px;
     margin: 0 16px;
-    padding-top: 20vh;
+    padding-top: 30vh;
   }
   .nct-sub-slogan {
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 16px;
     padding-top: 8px;
   }
@@ -704,6 +712,7 @@ h3, h4, h5 {
     display: none;
   }
 }
+
 a img {
   border: 0;
 }
@@ -722,6 +731,11 @@ button {
   }
 }
 
+@media screen and (max-width:480px) {
+  .nct-slogan {
+    font-size: 40px;
+  }
+}
 
 @keyframes fadein {
     from { opacity: 0; }
