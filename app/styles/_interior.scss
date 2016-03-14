@@ -1,0 +1,87 @@
+/* interior page styling */
+
+//colors
+$color_apple_approx: rgb(244,67,54);
+$white: #fff;
+$black_87: rgba(0, 0, 0, 0.87);
+$color_sunflower_approx: #FFF176;
+$black: black;
+$color_boulder_approx: #767777;
+$color_steel: #B0BEC5;
+$color_tuna_approx: #EF5350;
+$color_alto_approx: #dcdcdc;
+$color_concrete_approx: #f3f3f3;
+$color_limed_spruce_approx: #37474f;
+$color_caribbean_green_approx: #00bfa5;
+$alabaster: #fafafa;
+$color_red_as_hell: #F44336;
+$color_clouds: #F2F4F5;
+$color_off_black: #5D5D5D;
+
+//fonts
+$font_0: Roboto, Helvetica, Arial, sans-serif;
+
+$mono: Roboto Mono;
+
+//urls
+$url_0: url(../images/slide01.jpg);
+$url_building: url(../images/building.jpg);
+$url_2: url(../images/bottom-bg.jpg);
+$url_3: url(../images/footer-bg.png);
+
+
+
+body.interior {
+	.container {width:100%;}
+		li, p {font-weight:300;}
+		.nct-hero-interior {
+			height: 66vh;
+			background: $color_red_as_hell;
+			.container {
+				padding-right: 25px;
+    			padding-left: 25px;
+				width: 100%;
+				padding-top:45vh;
+			}
+			.nct-slogan {
+				padding-top: 0;
+				font-weight: 100;
+				width: 100%;
+				text-align: left;
+			}
+		}
+
+		main {
+			min-height: 100vh;
+			padding-top:5vh;
+			h2 {margin-bottom:1rem;font-weight:300;font-size:40px;}
+			li, p {color:$color_off_black;font-size:18px;}
+			.row {margin-top:2rem;}
+		}
+	#about {
+		li, p {font-weight:300;}
+		.nct-hero-interior {
+			height: 66vh;
+			background: $color_red_as_hell;
+			.container {
+				padding-right: 25px;
+    			padding-left: 25px;
+				width: 100%;
+				padding-top:45vh;
+			}
+			.nct-slogan {
+				padding-top: 0;
+				font-weight: 100;
+				width: 100%;
+				text-align: left;
+			}
+		}
+
+		main {
+			h2 {margin-bottom:1rem;font-weight:300;font-size:40px;}
+			li, p {color:$color_off_black;font-size:18px;}
+			.row {margin-top:2rem;}
+		}
+
+	}
+}

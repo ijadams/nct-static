@@ -33,11 +33,11 @@
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.red-yellow.min.css" />  
 
   </head>
-  <body class="">    <!--[if lt IE 10]>
+  <body class="interior">    <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
    
-    <div id="home" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="federal" class="mdl-layout mdl-js-layout mdl-layout--fixed-header interior federal">
 
       <div class="nct-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
@@ -60,11 +60,11 @@
           <div class="nct-navigation-container ">
             <nav class="nct-navigation mdl-navigation ">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="about.html">About</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Tech</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Federal</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Advantages</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Support</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#contact">Contact</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="tech.html">Tech</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="federal.html">Federal</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="advantages.html">Advantages</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="support.html">Support</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="contact.html">Contact</a>
             </nav>
 
           </div>
@@ -88,7 +88,7 @@
           <div id="main-links">
           <a class="mdl-navigation__link" href="about.html">About</a>
           <a class="mdl-navigation__link" href="tech.html">Tech</a>
-          <a class="mdl-navigation__link" href="federal.html">Federal</a>
+          <a class="mdl-navigation__link" href="support.html">Federal</a>
           <a class="mdl-navigation__link" href="advantages.html">Advantages</a>
           <a class="mdl-navigation__link" href="support.html">Support</a>
           <a class="mdl-navigation__link" href="contact.html">Contact</a>
@@ -110,186 +110,77 @@
       </div>
 
     <div class="nct-content mdl-layout__content"> <!-- begin content -->
-            
-    <section id="top" class="scrollspy">
-      <a></a>
-      <div class="nct-hero mdl-typography--text-center">
-        <canvas id="spiders" class="hidden-xs" width="100%" height="100%"></canvas>
-        <div class="logo-font nct-slogan">Network Communications Technology</div>
-        <div class="logo-font nct-sub-slogan">technology solutions with a purpose.</div>
 
-        <a href="#purpose">
-          <button class="nct-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-            <i class="material-icons">expand_more</i>
-          </button>
-        </a>
 
-      </div>
-     
-      <div id="purpose" class="row scrollspy">
-
-        <div id="home-middle-section" class="container">
-
-          <div id="home-second-heading" class="row block block-secondary block-centered block-row">
-            <article class="col-md-10 col-md-offset-1 text-center">
-              <h2>DATA DRIVEN, PEOPLE MINDED.</h2>
-              <p class="mdl-typography--display-2 mdl-typography--font-thin">Scale your projects with agility and speed, Our tools power industry leaders.</p>
-            </article>
-          </div><!-- /.row -->
-
-          
-            
-            <div class="row boxes row-eq-height">
-              <div class="col-md-6 box">
-                <div class="container">
-                <h2>WE'LL MAKE IT EASY FOR YOU</h2>
-                <hr class="seperator">
-                <p>We’re here to help you bring the best technology to your company. We believe the strongest work is completed when people working together seamlessly at every stage.</p>
-                <p>Let us help your teams focus on making the best products with latest technology through our technical expertise in network lab design, software support, and system engineering.
-                </p>
-                </div>
-              </div>  
-            <div class="col-md-6 text-center box v-center">
-              <img class="img-responsive " src="images/sphere.png"></div>
-            </div>
-
-        </div><!-- end container -->
-      </div><!-- end purpose -->
-
-      <div class="nct-advantages">
-        <div class="row parallax-container">
-          <div class="parallax"><img src="images/space-2.jpg"></div>
-          <div class="col-sm-1 hidden-xs"></div>
-          <div class="col-md-5">
-            <h1><i>High powered solutions for modern workflows</i></h1>
-            <p>NCT offers professionally curated software and hardware packages that will modernize your team's business practices. We understand what how to faciliate great work by using the best software and networking tools available.</p>
-            <p><a href="#our-products" style="color:white;">Learn more &darr;</a></p>
-          </div>
-        </div>
-          <a href="#our-products"><button class="nct-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-            <i class="material-icons">expand_more</i>
-          </button></a>
-      </div>
-
-      <div id="our-products" class="scrollspy nct-screen-section mdl-typography--text-center">
-        <div class="row">
-        <div class="col-md-2 hidden-sm"></div>
-        <div class="products col-md-4">
-          <h1>Our <br>Products</h1>
-          <a class="btnOutline-products" href="#/tech">VIEW ALL</a>
-        </div>
-        <div class="vendors">
-          <p>Vendors</p>
-          <ul>
-              <li>Atlassian</li>
-              <li>Cisco</li>
-              <li>Dell</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row product-row">
-        <div class="col-md-2 hidden-sm"></div>
-        <div class="col-xs-12 col-sm-6 col-md-2"><a href="#"><img src="images/keyboard.png"><h5><i class="material-icons">info_outline</i>
-        </h5><p>Software</p></a></div>
-        <div class="col-xs-12 col-sm-6 col-md-2"><a href="#"><img src="images/motherboard.png"><h5><i class="material-icons">info_outline</i>
-        </h5><p>Hardware</p></a></div>
-        <div class="col-xs-12 col-sm-6 col-md-2"><a href="#"><img src="images/server.png"><h5><i class="material-icons">info_outline</i>
-        </h5><p>Networking</p></a></div>
-        <div class="col-xs-12 col-sm-6 col-md-2"><a href="#"><img src="images/computer.png"><h5><i class="material-icons">info_outline</i>
-        </h5><p>Security</p></a></div>
-
-      </div>
-        
-      </div>
-
-      <div class="nct-cyber">
-        <div class="parallax-container">
-          <div class="parallax"><img src="images/science-guy.jpg"></div>
-          <div class="row">
-            <div class="col-sm-6 hidden-xs"></div>
-            <div class="col-md-5" id="cyber-text">
-              <h2 class="mdl-typography--display-2 mdl-typography--font-thin">Cyber Security Leaders</h2>
-              <hr>
-              <p class="mdl-typography--headline mdl-typography--font-thin">
-                With over 30 years experience supporting the federal government intelligence community, NCT is provides solutions for the leaders in the field of cyber security. Today, our products are used at some of the most influential government, commercial, and non-profit organizations.
-              </p>
-            </div>
-            <div class="col-sm-1 hidden-xs"></div>
+      <div class="nct-hero-interior mdl-typography">
+        <canvas id="spiders" class="hidden" width="100%" height="100%"></canvas>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="logo-font nct-slogan">Federal</div>
+              </div>
           </div>
         </div>
       </div>
 
-      <div class="outro">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
-            <h2>THE NCT ADVANTAGE</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center">
-             <p class="mdl-typography--display-2 mdl-typography--font-thin">
-              Great brands, experienced vendors.<br>
-              <span style="font-size:18px;">We are certified dealers with years of experience. See how NCT can make a difference today. </span>
-             </p>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-              <ul>
-                <li><img src="images/hp.png"></li>
-                <li><img src="images/atlassian-logo-2.png"></li>
-                <li><img src="images/lenovo.png"></li>
-                <li><img src="images/cisco-logo-2.png"></li>
-                <li><img src="images/dell-logo-2.png"></li>
-              </ul>
-              </ul>
-            </div>        
-        </div>
-      </div>
-
-      <div id="contact" class="nct-customized-section scrollspy row">
-        <div class="container">
-        <div class="row">
-        <div class="col-md-6">
-          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Let us find the perfect solution<br> for your team.
-            </div> 
-        </div>
-        <div class="col-md-6 text-center">
-
-          <a href="#" class="button mdl-typography--font-light mdl-typography--display-1-color-contrast">CONTACT</a>
-
-        </div>
-       </div>
-        <div class="nct-customized-section-image hidden-xs" style=""></div>
-      </div>
-    </div>
       
-          
-    </section>
+
+      <main>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2 class="h2">Here are the six main points</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-4">
+                <ol>
+                  <li>Data and personal information uploaded to the NCT Platform is the property of our customer, and we treat our customers’ data as confidential</li>
+                  <li>We do not sell personal information to advertisers or any other third parties</li>
+                  <li>You choose what personal information to upload to NCT People, and therefore shape how your profile appears to other users within your organization</li>
+                  <li>To operate the NCT Platform and inform our business decisions, we collect certain personal information automatically from our website and from the NCT Platform</li>
+                  <li>We use your personal information and information about how you use the website and NCT Platform to improve our products and services</li>
+                  <li>We will only share your personal information for our business purposes in accordance with our Privacy Policy, as directed by our customer, or as required by law</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        
+      </main>
+    
+
+    
 
 
     <footer class="nct-footer mdl-mega-footer">
               <div class="mdl-mega-footer--top-section">
                 <div class="col-md-4 footer-left">
-                  <!--<p>
+                  <p>
                   Network Communications Technology, Inc.<br>
                   5305 Village Center Dr Suite 220<br>
                   Columbia, MD 21044<br>
                   443-445-2128
-                  </p>-->
+                  </p>
                 </div>
 
                 <div class="col-md-4 footer-center">
+                  <p>Certified Vendors:</p>
+                  <ul>
+                    <li><img src="images/dell-logo.png"></li>
+                    <li><img src="images/atlassian-logo.png"></li>
+                    <li><img src="images/cisco-logo.png"></li>
+                  </ul>
 
                 </div>
       
-                <div class="col-md-4 footer-right"><!--
+
+                <div class="col-md-4 footer-right">
                   <a class="social"><i class="mdi mdi-twitter"></i></a>
                   &nbsp;
                   <a class="social"><i class="mdi mdi-facebook"></i></a> 
                   &nbsp;
                   <a class="social"><i class="mdi mdi-linkedin"></i></a>
-                  <br>-->
+                  <br>
                   <a class="mdl-typography--font-light" href="#top">
                     Back to Top
                     <i class="material-icons">expand_less</i>
@@ -302,7 +193,7 @@
 
         
   </div> <!-- layout content -->
-</div> 
+</div> <!-- smooth state -->
 
     
     
