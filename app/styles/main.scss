@@ -197,6 +197,7 @@ h3, h4, h5 {
     &:hover {
       border-bottom: 4px solid $color_tuna_approx;
       text-decoration: none !important;
+      font-weight: 700;
     }
   }
 }
@@ -732,10 +733,16 @@ h3, h4, h5 {
   margin-bottom: 0;
   text-align: left;
   transition: .5s;
-  .container {padding-top:12vh;}
+  box-shadow:0 0 0 0 rgba(255,0,0,0.5) inset; 
+   -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -kthtml-transition: all 0.5s linear;
+    transition: all 0.5s linear;  .container {padding-top:12vh;}
   .button {transition: .5s;padding:1.5rem 2rem;background:transparent;text-transform:uppercase;color:black; &:hover {background:$color_sunflower_approx;color:$color_tuna_approx !important;}}
   &:hover {
-    background-color: $color_tuna_approx;
+    box-shadow:1800px 0 0 0px rgba(244,67,54,0.9) inset;
     color: white;
     .button {border:3px solid $color_sunflower_approx;color:white;}
     .mdl-typography--display-1-color-contrast {opacity: 1;}
@@ -754,11 +761,11 @@ h3, h4, h5 {
 
 
 .nct-footer {
-  background-color: #95a5a6 !important;
+  background-color: #616161 !important;
   position: relative;
   color: white !important;
   .row {margin-bottom:0;}
-  p {font-size:13px;line-height:1em;margin-bottom:0;}
+  p {font-size:13px;line-height:1em;margin-bottom:0;font-weight:400 !important;}
   a {color:white;}
   .mdl-mega-footer {padding:10px !important;}
 
@@ -801,6 +808,7 @@ h3, h4, h5 {
   .footer-right {
     float: right;
     text-align: right;
+    margin-top: -5px;
     @media screen and (max-width:768px) {
       width: 100%;
       display: inline-block;
@@ -825,6 +833,39 @@ h3, h4, h5 {
       }
   }
 }
+
+
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+  perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  transform: translateY(-25%) rotateX(35deg);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+  transform: translateY(25%) rotateX(-35deg);
+}
+
 
 
 @media(max-width: 900px) {
@@ -911,6 +952,8 @@ button {
     opacity: 1;
   }
 }
+
+
 
 @media screen and (max-width:480px) {
   .nct-slogan {

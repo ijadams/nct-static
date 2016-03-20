@@ -48,13 +48,15 @@ body.interior {
 				font-weight: 100;
 				width: 100%;
 				text-align: left;
+				font-family: $mono;
 			}
 		}
 
 		main {
 			min-height: 100vh;
 			padding-top:5vh;
-			h2 {margin-bottom:1rem;font-weight:300;font-size:40px;}
+			a {color: gray; &:hover {color:lightgray;}}
+			h2 {margin-bottom:1rem;font-weight:100;font-size:40px;}
 			li, p {color:$color_off_black;font-size:18px;}
 			.row {margin-top:2rem;}
 		}
@@ -74,6 +76,7 @@ body.interior {
 				font-weight: 100;
 				width: 100%;
 				text-align: left;
+				font-family: $mono;
 			}
 		}
 
@@ -84,4 +87,25 @@ body.interior {
 		}
 
 	}
+
+	#tech {
+		h4 {font-family: 'Roboto', sans-serif !important;font-size:18px;font-weight:600;}
+		.content {
+			ul {margin-left:2rem;}
+			ul li {list-style-type:disc;}
+		}
+	}
+
+	#advantages {
+		#contact {margin-top:8rem;}
+	}
+}
+
+a.mdl-navigation__link.mdl-typography--text-uppercase.active {
+    border-bottom: 4px solid #EF5350 !important;
+    font-weight: 700;
+}
+
+@media screen and (min-width:64em) {
+	body.interior .nct-hero-interior .nct-slogan {font-size:84px;}
 }

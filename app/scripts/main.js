@@ -270,10 +270,10 @@ $( function() {
 
         // create points
         points = [];
-        for ( var x = 0; x < width; x = x + width / 20 ) {
-            for ( var y = 0; y < height; y = y + height / 20 ) {
-                var px = x + Math.random() * width / 20;
-                var py = y + Math.random() * height / 20;
+        for ( var x = 0; x < width; x = x + width / 25 ) {
+            for ( var y = 0; y < height; y = y + height / 25 ) {
+                var px = x + Math.random() * width / 25;
+                var py = y + Math.random() * height / 25;
                 var p = {
                     x: px,
                     originX: px,
@@ -392,8 +392,8 @@ $( function() {
 
     function shiftPoint( p ) {
         TweenLite.to( p, 1 + 1 * Math.random(), {
-            x: p.originX - 50 + Math.random() * 100,
-            y: p.originY - 50 + Math.random() * 100,
+            x: p.originX - 50 + Math.random() * 50,
+            y: p.originY - 50 + Math.random() * 50,
             onComplete: function() {
                 shiftPoint( p );
             }
