@@ -131,6 +131,7 @@ h3, h4, h5 {
     color: $color_steel !important;
     font-weight: 700;
     font-size: 14px;
+    text-transform: lowercase;
   }
   .nct-search-box .mdl-textfield .mdl-button {
     bottom: 15px !important;
@@ -280,7 +281,7 @@ h3, h4, h5 {
   position: relative;
   height: auto;
   width: auto;
-  background: url(../images/hero-image.jpg) no-repeat;
+  background: url(../images/space.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -377,8 +378,8 @@ h3, h4, h5 {
   .parallax img {left:65% !important;}
   .parallax-container {height:100%;}
   height:100vh;
-  @media screen and (max-width:480px) { 
-      background-image: linear-gradient(to right,rgba(254,60,22,1),rgba(254,60,22,0.85),rgba(254,60,22,0.85));
+  @media screen and (max-width: 970px) { 
+      background: rgba(254,60,22,0.85);
   }
 
   .row {
@@ -586,6 +587,11 @@ h3, h4, h5 {
 
 .nct-cyber {
   min-height: 95vh;
+  background-image: -webkit-linear-gradient(right, #fe3c16, rgba(254, 60, 22, 0.9), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to left, #fe3c16, rgba(254, 60, 22, 0.9), rgba(0, 0, 0, 0.3));
+  @media screen and (max-width:970px) {
+    background: rgba(254, 60, 22, 0.9);
+  }
   .parallax-container {height:95vh;} 
   .row {
     padding-top:20vh;
@@ -756,7 +762,18 @@ h3, h4, h5 {
     .container {padding-top:2vh;}
     .col-md-6 {text-align:center;margin:2rem 0;}
     .col-md-6:first-child {padding-bottom:1rem;}
+    .mdl-typography--font-light.mdl-typography--display-1-color-contrast {font-size:28px;}
+    a.button.mdl-typography--font-light.mdl-typography--display-1-color-contrast {
+      font-size: 32px !important;
+    }
   }
+  @media screen and (max-width:768px) {
+    .mdl-typography--font-light.mdl-typography--display-1-color-contrast {font-size:20px;}
+    a.button.mdl-typography--font-light.mdl-typography--display-1-color-contrast {
+      font-size: 24px !important;
+    }
+  }
+  
 }
 
 

@@ -42,6 +42,10 @@ body.interior {
     			padding-left: 25px;
 				width: 100%;
 				padding-top:45vh;
+				@media screen and (max-width:40em) {
+					padding-left: 0;
+					padding-top:50vh;
+				}
 			}
 			.nct-slogan {
 				padding-top: 0;
@@ -70,7 +74,12 @@ body.interior {
     			padding-left: 25px;
 				width: 100%;
 				padding-top:45vh;
+				@media screen and (max-width:40em) {
+					padding-left: 0;
+					padding-top:50vh;
+				}
 			}
+
 			.nct-slogan {
 				padding-top: 0;
 				font-weight: 100;
@@ -84,6 +93,8 @@ body.interior {
 			h2 {margin-bottom:1rem;font-weight:300;font-size:40px;}
 			li, p {color:$color_off_black;font-size:18px;}
 			.row {margin-top:2rem;}
+			ul li {list-style-type:disc;font-size:16px;}
+			ul {padding-left:2rem;}
 		}
 
 	}
@@ -108,4 +119,10 @@ a.mdl-navigation__link.mdl-typography--text-uppercase.active {
 
 @media screen and (min-width:64em) {
 	body.interior .nct-hero-interior .nct-slogan {font-size:84px;}
+}
+
+
+@media screen and (max-width:40em) {
+	.footer-center {display:none;}
+	.footer-right {display:none !important;}
 }
