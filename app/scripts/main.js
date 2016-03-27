@@ -460,6 +460,36 @@ function collapseNavbar() {
 }
 
 
+/* CONTACT FORM */
+$(function() {
+	$( "a.mdl-navigation__link:last-child" ).click(function() {
+		event.preventDefault();
+		$('body').toggleClass('overlay-open');
+		$('#sidenav-overlay').css('background','transparent');
+	});
+	$( "#contact a" ).click(function() {
+		event.preventDefault();
+		$('body').toggleClass('overlay-open');
+	});
+	
+	$( ".overlay-close" ).click(function() {
+		event.preventDefault();
+		$('body').toggleClass('overlay-open');
+	});
+
+
+	$(document).keyup(function(e) {
+		 if (e.keyCode == 27) { // escape key maps to keycode `27`
+		 	if ($('body').hasClass('overlay-open')) {
+		    	$('body').toggleClass('overlay-open');
+		    }
+		}
+	});
+
+});
+
+$('html, body').scrollTop(0);
+
        
 
  

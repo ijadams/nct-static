@@ -59,6 +59,7 @@ body.interior {
 		main {
 			min-height: 100vh;
 			padding-top:5vh;
+			padding-bottom: 10vh;
 			a {color: gray; &:hover {color:lightgray;}}
 			h2 {margin-bottom:1rem;font-weight:100;font-size:40px;}
 			li, p {color:$color_off_black;font-size:18px;}
@@ -122,7 +123,8 @@ a.mdl-navigation__link.mdl-typography--text-uppercase.active {
 }
 
 
-@media screen and (max-width:40em) {
+@media screen and (max-width:64em) {
+	.col-md-4.footer-left {text-align:center;}
 	.footer-center {display:none;}
 	.footer-right {display:none !important;}
 }
