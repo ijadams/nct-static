@@ -1,4 +1,7 @@
 <?php
+require 'PHPMailerAutoload.php';
+
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $company = $_POST['company'];
@@ -14,9 +17,13 @@
 <?php
 if ($_POST['submit']) {
     if (mail ($to, $subject, $body, $from)) { 
-        echo '<p>Thank you for your email!</p>';
-    } else { 
-        echo '<p>Oops! An error occurred. Try sending your message again.</p>'; 
+        header('Location: nextpage.php');
+    } else { ?> 
+            <script type="text/javascript">
+                alert("Whoops - Looks like your are missing some information!");
+            </script>
+        <?php
+        echo ''; 
     }
 }
 ?>

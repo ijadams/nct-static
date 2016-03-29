@@ -486,7 +486,54 @@ $(function() {
 		}
 	});
 
+
+	$("#contact-form").submit(function()
+    {
+        var email = $("#email").val(); // get email field value
+        var name = $("#name").val(); // get name field value
+        var company = $("#company").val(); // get name field value
+		var phone = $("#phone").val(); // get name field value
+        var msg = $("#message").val(); // get message field value
+        $.ajax(
+        {
+            type: "POST",
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+                'key': 'yudWny6bZPaYRn-_S3lZTQ',
+                'message': {
+                    'from_email': email,
+                    'from_name': name,
+                    'from_company': company,
+                    'from_phone': phone,
+                    'headers': {
+                        'Reply-To': email
+                    },
+                    'subject': 'NCT - Website Contact Form Submission',
+                    'text': msg,
+                    'to': [
+                    {
+                        'email': 'sales@nctonline.com',
+                        'name': 'NCT',
+                        'type': 'to'
+                    }]
+                }
+            }
+        })
+        .done(function(response) {
+            $("#name").val(''); // reset field after successful submission
+            $("#email").val(''); // reset field after successful submission
+            $("#msg").val(''); // reset field after successful submission
+            window.location.href = "thank-you.html";
+        })
+        .fail(function(response) {
+            alert('Error sending message.');
+        });
+        return false; // prevent page refresh
+    });
+
 });
+
+
 
 $('html, body').scrollTop(0);
 
