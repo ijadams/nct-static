@@ -231,40 +231,45 @@
       <div class="block-intro">
         <h1>Get in touch</h1>
         <br>
-          <form action="form.php" method="post" enctype="multipart/form-data" id="contact-form">
+          <form id="contact-form" action="https://formspree.io/ijadams503@gmail.com"
+      method="POST">
               <div class="group">      
-                <input name="name" type="text" required>
+                <input id="name" name="name" type="text" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
               </div>
               <div class="group">      
-                <input input="company" type="text" required>
+                <input id="company" name="company" input="company" type="text" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Company Name</label>
               </div>
                <div class="group">      
-                <input name="email" type="text" required>
+                <input id="email" name="email" type="text" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
               </div>
               <div class="group">  
-                <input name="phone" type="text" required>
+                <input id="phone" name="phone" type="text" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Phone Number</label>
               </div>
                <div class="group">      
-                <input name="message" type="text" required>
+                <input id="message" name="message" type="text" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
               </div>
+              <input type="text" name="_gotcha" style="display:none" />
+              <input type="hidden" name="_subject" value="NCT Contact Form" />
+              <input type="hidden" name="_next" value="thank-you.html" />
+              <input type="hidden" name="_cc" value="sales@nctonline.com" />
 
             <center>
-              <button type="submit" form="contact-form" value="Submit" class="button mdl-typography--font-light mdl-typography--display-1-color-contrast">Submit</button>
+              <button id="submit" type="submit" form="contact-form" value="Submit" class="button mdl-typography--font-light mdl-typography--display-1-color-contrast">Submit</button>
             </center>
 
         </form>

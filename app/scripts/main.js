@@ -486,7 +486,7 @@ $(function() {
 		}
 	});
 
-
+	/*
 	$("#contact-form").submit(function()
     {
         var email = $("#email").val(); // get email field value
@@ -529,7 +529,7 @@ $(function() {
             alert('Error sending message.');
         });
         return false; // prevent page refresh
-    });
+    });*/
 
 });
 
