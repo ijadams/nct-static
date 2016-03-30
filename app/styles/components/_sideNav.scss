@@ -105,8 +105,11 @@
   right: 0;
 
   height: 120vh;
-  background-color: rgba(0,0,0,.5);
-  z-index: 997;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 50;
 
   will-change: opacity;
+  @media screen and (max-width: 40em) {
+    display: none;
+  }
 }

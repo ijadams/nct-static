@@ -61,6 +61,16 @@ body.overlay-open {
         cursor: pointer;
       }
     }
+
+    .group {
+      display: block;
+    }
+
+    @media screen and (max-width:40em) {
+      h1 {font-size:36px;}
+      br {display:none;}
+      .overlay-close {top:15px;right:15px;}
+    }
 }
 
 .overlay-ctnr {
@@ -113,6 +123,7 @@ body.overlay-open {
     .group        { 
       position:relative; 
       margin-bottom:30px; 
+      display: none;
     }
 
     input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill { 
@@ -130,6 +141,10 @@ body.overlay-open {
     input[type=text] {
       border-bottom: 1px solid #ecf0f1;
       &:active {border-color:white;}
+    }
+
+    input#name {
+    background-image: none !important;
     }
 
      .button {
@@ -365,7 +380,7 @@ h3, h4, h5 {
   }
 }
 
-#mobile-logo {margin:0;color:black;padding-left:1rem;display:none;font-family:'Roboto', Helvetica, Arial, sans-serif;font-weight:500;font-size:1.5em;color:$color_tuna_approx;}
+#mobile-logo {margin:0;color:black;padding-left:1rem;display:none;font-family:'Roboto', Helvetica, Arial, sans-serif;font-weight:700 !important;font-size:1.5em;color:$color_tuna_approx;}
 
 .nct-navigation-container {
   direction: rtl;
@@ -400,6 +415,7 @@ h3, h4, h5 {
 }
 
 .nct-drawer {
+  z-index: 999999999999;
   border-right: none;
   .mdl-layout-title {
     position: relative;
@@ -522,6 +538,7 @@ h3, h4, h5 {
           color: $color_off_black;
           margin-bottom: 1.5rem;
           @media screen and (max-width:970px) {text-align: left;}
+          @media screen and (max-width:40em) {text-align:center;}
         }
         h4 {color:$color_off_black;}
         hr {width: 5%;margin: 24px auto;border-top: solid $color_tuna_approx 3px;}
@@ -529,6 +546,10 @@ h3, h4, h5 {
             @media screen and (max-width:970px) {
                 font-size: 2em;
                 text-align: left;
+            }
+            @media screen and (max-width:40em) {
+              text-align: center;
+              font-size: 1.5em;
             }
         }
     }
@@ -550,7 +571,7 @@ h3, h4, h5 {
           .container {padding:2rem;}
           background: #E9EAEA;
           @media screen and (max-width:970px) {min-width:100%;}
-          @media screen and (max-width:480px) {img {height:300px;}.container {padding:0;}}
+          @media screen and (max-width:480px) { h2 {font-size: 1.5em;margin-bottom: 0.5em;line-height: 1.5em;}p {font-size:1em;}img {height:auto;width:100%;}.container {padding:0;}}
       }
     }
     #home-feature-preview {padding-top:0.5rem;padding-bottom:0.5rem;}
@@ -576,11 +597,20 @@ h3, h4, h5 {
       .col-md-5 {padding: 0 2rem;}
   }
 
+  @media screen and (max-width:40em) {
+    background: rgba(254, 60, 22, 1);
+  }
+
   .row {
     padding-top:20vh;
     @media screen and (max-width:480px) {
-      padding-top:20vh;
+      padding-top:0;
       h1 {line-height:1.5em;font-size:2.213em;}
+      .col-md-5 {      
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
+      }
     }
     color:white;
       h1 {line-height:1.2em;}
@@ -624,6 +654,9 @@ h3, h4, h5 {
       text-align:center;
       padding:0;
       margin:0 auto; 
+    }
+    @media screen and (max-width:40em) {
+      h1 {font-size: 60px;}
     }
   }
 
@@ -690,6 +723,10 @@ h3, h4, h5 {
               webkit-filter: opacity(.2);
               filter: opacity(.2);}
           }
+
+      @media screen and (max-width:40em) {
+        display: none;
+      }
 
     }
 }
@@ -786,6 +823,9 @@ h3, h4, h5 {
   @media screen and (max-width:970px) {
     background: rgba(254, 60, 22, 0.9);
   }
+  @media screen and (max-width:40em) {
+    background: rgba(254, 60, 22, 9.95);
+  }
   .parallax-container {height:95vh;} 
   .row {
     padding-top:20vh;
@@ -801,7 +841,18 @@ h3, h4, h5 {
        #cyber-text {
           padding: 0 3rem;
         }
-        padding-top:10vh;
+        padding-top:8vh;
+    }
+    @media screen and (max-width:40em) {
+      padding-top:0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      #cyber-text {
+          padding: 0 2rem;
+      }
+      h2 {font-size:2em;}
+      p {font-size:1em;}
     }
   }
 }
@@ -934,6 +985,9 @@ h3, h4, h5 {
   }
   h3 {font-size:35px;}
   p {font-size:3.5vw;}
+  @media screen and (max-width:40em) {
+    p {font-size: 5.5vw;}
+  }
   .row:first-child {padding-top:15vh;}
 }
 
@@ -964,7 +1018,7 @@ h3, h4, h5 {
   }
   @media screen and (max-width:991px) {
     .container {padding-top:2vh;}
-    .col-md-6 {text-align:center;margin:2rem 0;}
+    .col-md-6 {text-align:center;margin:3rem 0;}
     .col-md-6:first-child {padding-bottom:1rem;}
     .mdl-typography--font-light.mdl-typography--display-1-color-contrast {font-size:28px;}
     a.button.mdl-typography--font-light.mdl-typography--display-1-color-contrast {
@@ -972,14 +1026,19 @@ h3, h4, h5 {
     }
   }
   @media screen and (max-width:768px) {
-    .mdl-typography--font-light.mdl-typography--display-1-color-contrast {font-size:20px;}
+    .mdl-typography--font-light.mdl-typography--display-1-color-contrast {font-size:28px;}
     a.button.mdl-typography--font-light.mdl-typography--display-1-color-contrast {
-      font-size: 24px !important;
+      font-size: 30px !important;
       border: 3px solid gray;
       color: gray;
     }
-  }
-  
+    
+    .col-md-6:first-child {padding-bottom:2rem;}
+
+    min-height: 50vh;
+
+
+  }  
 }
 
 
@@ -1032,6 +1091,7 @@ h3, h4, h5 {
     float: right;
     text-align: right;
     margin-top: -5px;
+    br {display:none;}
     @media screen and (max-width:768px) {
       width: 100%;
       display: inline-block;
@@ -1039,7 +1099,7 @@ h3, h4, h5 {
       text-align: center;
       margin:0 auto;
       .social {
-        display: inline-block;
+        display:none;
       } 
     }
   }
@@ -1048,6 +1108,7 @@ h3, h4, h5 {
     top: 6px;
   }
   .footer-right a.social i {
+    display: none;
       font-size: 24px;
       color: white;
       &:hover  {
@@ -1148,6 +1209,7 @@ button {
 @media screen and (max-width:480px) {
   .nct-slogan {
     font-size: 40px;
+    max-width: 95%;
   }
 }
 
